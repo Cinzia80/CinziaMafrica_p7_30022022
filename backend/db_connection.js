@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 require('dotenv').config();
 
 const sql = mysql.createPool({
-  localhost: process.env.DB_LOCALHOST,
+  localhost: process.env.DB_HOST,
   user: process.env.DB_USER,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
@@ -19,8 +19,7 @@ const connection = mysql.createConnection({
   user: "Cinzia80", 
   password: 'KaiserBar2021',
   database: "groupomania",
-  port: '3036',
-  password: 'KaiserBar2021'
+  port: '3306',
 });
 
 sql.getConnection(function (err) {
